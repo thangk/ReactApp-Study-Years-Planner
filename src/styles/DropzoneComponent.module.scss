@@ -1,0 +1,14 @@
+@import "mixins";
+@import "variables";
+
+
+
+.dropzone {
+    border-radius: 15px;
+    height: 33px;
+}
+
+.hovered {
+    background: #f4f4f4;
+    border: 2px dashed $button-colour-darker;
+}

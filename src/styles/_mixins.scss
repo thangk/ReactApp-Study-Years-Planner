@@ -1,0 +1,86 @@
+@mixin in-bound-animation {
+    animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+}
+
+@mixin out-bound-animation {
+	animation: swing-out-top-fwd 0.5s cubic-bezier(0.950, 0.050, 0.795, 0.035) reverse ;
+}
+
+@mixin out-bound-animation-courses {
+    animation: puff-out-hor 0.9s cubic-bezier(0.165, 0.840, 0.440, 1.000) both;
+}
+
+@mixin popupWindowFrame {
+    color: #ffffff;
+    background-color: $button-colour;
+    border: 2px solid $button-colour-darker;
+    border-radius: 5px;
+    padding: 2rem;
+
+    .popup-window-title {
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+// Animation generated from https://animista.net/
+
+@keyframes swing-in-top-fwd {
+    0% {
+      -webkit-transform: rotateX(-100deg);
+              transform: rotateX(-100deg);
+      -webkit-transform-origin: top;
+              transform-origin: top;
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: rotateX(0deg);
+              transform: rotateX(0deg);
+      -webkit-transform-origin: top;
+              transform-origin: top;
+      opacity: 1;
+    }
+  }
+  @keyframes swing-out-top-fwd {
+    0% {
+      -webkit-transform: rotateX(-100deg);
+              transform: rotateX(-100deg);
+      -webkit-transform-origin: top;
+              transform-origin: top;
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: rotateX(0deg);
+              transform: rotateX(0deg);
+      -webkit-transform-origin: top;
+              transform-origin: top;
+      opacity: 1;
+    }
+  }
+  @keyframes puff-out-hor {
+    0% {
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleX(2);
+              transform: scaleX(2);
+      -webkit-filter: blur(4px);
+              filter: blur(4px);
+      opacity: 0;
+    }
+  }
+  

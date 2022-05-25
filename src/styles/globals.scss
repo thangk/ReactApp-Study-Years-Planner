@@ -1,0 +1,119 @@
+@import "mixins";
+@import "variables";
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Cairo&display=swap');
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Cairo, sans-serif;
+  font-weight: 500;
+}
+
+
+
+// ############################################
+// Others
+// ############################################
+
+
+@media print {
+  body * {
+      visibility: hidden;
+  }
+
+  #print-area, #print-area * {
+      visibility: visible;
+  }
+
+}
+
+
+// ############################################
+// Independant styles
+// ############################################
+
+.popupopen {
+  @include in-bound-animation();
+}
+
+.popupclose {
+  @include out-bound-animation();
+}
+
+.clear-courses-animation {
+  @include out-bound-animation-courses();
+}
+
+.blurbg {
+  filter: blur(1px);
+}
+
+.blurbg-error {
+  filter: blur(2px);
+}
+
+.moveMarginUp {             // adjusted for so printing will fit 5 terms in a single A4 paper
+  margin-top: -20rem;
+}
+
+.invisible {
+  display: none;
+}
+
+.bg-block {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+}
+
+.error-bg-block {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: $error-z-index;
+}
+
+// .popup-window-title {
+//   justify-content: center;
+//   text-align: center;
+//   margin-bottom: 2rem;
+// }
+
+.rightButton {
+  float: right;
+  margin-left: .20rem;
+}
+
+.course {
+  cursor: pointer;
+  font-size: small;
+  width: 100%;
+  color: white;
+  // background-color: $courses-colour;
+  padding: .15rem 0;
+  border-radius: 2px;
+  transition: .75s;
+  
+  &:hover {
+      opacity: 50%;
+  }
+
+}
+
+
+
+// ############################################
+// Animation keyframes
+// ############################################
+
+@keyframes fadeout {
+  from {
+      opacity: 1;
+  }
+  to {
+      opacity: .1;
+  }
+}

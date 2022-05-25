@@ -1,0 +1,44 @@
+@import "mixins";
+@import "variables";
+
+.confirm-wrapper {
+    position: fixed;
+    left: 50%;
+    top: 20rem;
+    transform: translate(-50%, -50%);
+    z-index: $error-z-index;
+    width: 450px;
+    
+    .confirm-confirmation {
+
+        @include popupWindowFrame();
+
+        .confirm-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 2rem;
+            row-gap: 1rem;
+            font-size: small;
+            align-items: center;
+    
+            p {
+                text-align: center;
+                grid-column: span 2;
+            }
+    
+            div {
+                display: inline-block;
+
+                input {
+                    margin-top: 2rem;
+                    width: 140px;
+                }
+
+                #yesButton {
+                    float: right;
+                }
+            }
+            
+        }
+    }
+}

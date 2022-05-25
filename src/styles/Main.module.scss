@@ -1,0 +1,85 @@
+@import "mixins";
+@import "variables";
+
+
+.top {
+  position: relative;
+  display: inline-flexbox;
+  width: 800px;
+  margin: 3rem auto;
+
+  .logo {
+      position: absolute;
+      left: 50%;
+      top: -0.2rem;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      width: fit-content;
+
+      h1 {
+          font-family: 'Bungee Shade', cursive;   // google font
+          font-weight: bold;
+      }
+  }
+
+  .version {
+      position: absolute;
+      left: 80.5%;
+      top: 0.4rem;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      width: fit-content;
+  }
+
+  .content-wrapper {
+      background-color: $primary-background-colour;
+      padding: 3rem 0rem;
+      border-radius: .5rem;
+      z-index: 0;
+      width: 90%;
+      margin: 0 auto;
+
+      .sticky {
+          position: sticky;
+          background-color: $primary-background-colour;
+          padding: 1rem;
+          top: 0;
+          margin-left: -20px;
+          width: 760px;
+          box-shadow: 0 0 6px 2px $shadow-colour;
+          border-radius: 5px;
+          z-index: 1;
+          
+
+          .buttons-menu {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 2em;
+          
+              button {
+                  background-color: $button-colour;
+                  color: white;
+                  margin: 0 0.25rem;
+                  padding: 0.25rem 1rem;
+                  border: 2px solid $button-colour-darker;
+                  border-radius: 3px;
+                  cursor: pointer;
+                  transition: .75s;
+              
+                  &:hover {
+                      background-color: $button-colour-lighter;
+                      color: black;
+                      
+                  }
+              }
+          }
+          
+      }
+  }
+}
+
+
+
+
+

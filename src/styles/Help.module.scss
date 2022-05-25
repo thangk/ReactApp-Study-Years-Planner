@@ -1,0 +1,40 @@
+@import "mixins";
+@import "variables";
+
+
+.help-wrapper {
+    position: fixed;
+    left: 50%;
+    top: 30rem;
+    transform: translate(-50%, -50%);
+    z-index: $popup-z-index;
+    width: 550px;
+    
+    
+    .help-information {
+
+        @include popupWindowFrame();
+
+        .help-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 2rem;
+            row-gap: 1rem;
+            font-size: small;
+    
+            p {
+                grid-column: span 2;
+            }
+    
+            input {
+                grid-column: 2 / 2;
+                margin-top: 2rem;
+            }
+    
+            label {
+                text-align: right;
+                padding-right: 1rem;
+            }
+        }
+    }
+}

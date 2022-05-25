@@ -1,0 +1,61 @@
+@import "mixins";
+@import "variables";
+
+.form-wrapper {
+    position: fixed;
+    left: 50%;
+    top: 25rem;
+    transform: translate(-50%, -50%);
+    width: 550px;
+    z-index: $popup-z-index;
+
+    form {
+
+        @include popupWindowFrame();
+    
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            row-gap: .75rem;
+            
+            
+            input {
+                padding-left: .25rem;
+    
+                &:focus {
+                    outline: none;
+                }
+            }
+    
+            .terms-checkbox {
+                display: grid;
+                align-items: center;
+                grid-template-columns: 1fr;
+
+                input {
+                    margin-right: 1rem;
+                }
+    
+                label {
+                    text-align: left;
+                }
+            }
+            
+    
+            label {
+                text-align: right;
+                padding-right: 1rem;
+            }
+    
+            .form-btns {
+                margin-top: 2rem;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                column-gap: 1rem;
+                width: 100%;
+    
+            }
+        
+        }
+    }
+}

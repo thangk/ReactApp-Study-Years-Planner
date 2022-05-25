@@ -1,0 +1,113 @@
+@import "mixins";
+@import "variables";
+
+
+
+.years-wrapper {
+    margin-top: 2rem;
+    
+    .ayear {
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(11, 1fr);
+  
+
+        .ayear-title-box {
+            display: grid;
+            grid-template-columns: 1fr;
+
+            .ayear-title {
+                margin-top: 0.25rem;
+                text-align: right;
+                grid-column: span 2;
+            }
+            
+
+            .ayear-title-upsdowns {
+                // grid-column: 2 / 3;
+                text-align: right;
+                // display: flex;
+                // justify-content: space-around;
+                color: $button-colour-darker;
+                // background-color: aqua;
+
+                .plusminusButtons {
+                    margin-left: .6rem;
+                    cursor: pointer;
+
+                    &:hover {
+                        
+                        color: $button-colour;
+                    }
+                }
+            }
+        }
+
+        
+  
+        .term {
+            grid-column: span 3;
+            // min-height: 160px;
+            // height: 208px;
+            width: 160px;
+            margin: 10px auto;
+            border: 2px $courses-border-colour solid;
+            background-color: $secondary-background-colour;
+            // display: inline-table;
+            border-radius: 5px;
+            height: fit-content;
+        
+            .term-name {
+                border-top-left-radius: 2.5px;
+                border-top-right-radius: 2.5px;
+                background-color: $button-colour-lighter;
+            }
+        
+            
+  
+            
+  
+        }
+        
+        .fadeout {
+            animation: fadeout 0.5s;
+            opacity: .1;
+        }
+  
+        h3 {
+            // display: inline-flex;
+            font-weight: bold;
+        }
+  
+        
+    }
+  
+    .newElement {
+        @include in-bound-animation();
+    }
+  
+    .deleteYearElement {
+        @include out-bound-animation();
+    }
+  }
+  
+  
+  .ayear-edit-buttons {
+  
+    margin-top: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 5rem;
+    color: $button-colour-darker;
+       
+  
+    .edit-buttons {
+        cursor: pointer;
+
+        &:hover {
+            color: $button-colour;
+        }
+    }
+  
+  }

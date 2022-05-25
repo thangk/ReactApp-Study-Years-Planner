@@ -1,0 +1,44 @@
+@import "mixins";
+@import "variables";
+
+.reset-wrapper {
+    position: fixed;
+    left: 50%;
+    top: 20rem;
+    transform: translate(-50%, -50%);
+    z-index: $popup-z-index;
+    width: 550px;
+    
+    .reset-confirmation {
+
+        @include popupWindowFrame();
+
+        .reset-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 2rem;
+            row-gap: 1rem;
+            font-size: small;
+            align-items: center;
+    
+            p {
+                text-align: center;
+                grid-column: span 2;
+            }
+    
+            div {
+                display: inline-block;
+
+                input {
+                    margin-top: 2rem;
+                    width: 140px;
+                }
+
+                #yesButton {
+                    float: right;
+                }
+            }
+            
+        }
+    }
+}

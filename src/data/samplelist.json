@@ -1,0 +1,134 @@
+[
+    {
+      "name": "COMP-2140",
+      "dropzoneid": "",
+      "mcindex": -1,
+      "terms": [
+        "Fall",
+        "Winter"
+      ]
+    }
+    ,
+    {
+      "name": "COMP-2310",
+      "dropzoneid": "",
+      "mcindex": -1,
+      "terms": [
+        "Fall",
+        "Winter"
+      ]
+    }
+    ,
+    {
+      "name": "COMP-3670",
+      "dropzoneid": "",
+      "mcindex": -1,
+      "terms": [
+        "Winter",
+        "Summer",
+        "Fall"
+      ]
+    },
+    {
+      "name": "COMP-1400",
+      "dropzoneid": "",
+      "mcindex": -1,
+      "terms": [
+        "Fall",
+        "Winter"
+      ]
+    },
+    {
+      "name": "COMP-1410",
+      "dropzoneid": "",
+      "mcindex": -1,
+      "terms": [
+        "Fall",
+        "Winter"
+      ]
+    },
+    {
+      "name": "COMP-2560",
+      "dropzoneid": "",
+      "mcindex": -1,
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ]
+    },
+    {
+      "name": "COMP-3300",
+      "dropzoneid": "",
+      "mcindex": -1,
+      "terms": [
+        "Fall",
+        "Winter"
+      ]
+    },
+    {
+      "name": "STAT-2910",
+      "dropzoneid": "",
+      "mcindex": -1,
+      "terms": [
+        "Winter"
+      ]
+    },
+    {
+      "name": "STEN-1000",
+      "dropzoneid": "",
+      "mcindex": -1,
+      "terms": [
+        "Fall",
+        "Winter"
+      ]
+    },
+    {
+      "name": "ECON-1100",
+      "dropzoneid": "",
+      "mcindex": -1,
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ]
+    },
+    {
+      "name": "PHYS-1000",
+      "dropzoneid": "",
+      "mcindex": -1,
+      "terms": [
+        "Summer"
+      ]
+    },
+    {
+      "name": "PHIL-2280",
+      "dropzoneid": "",
+      "mcindex": -1,
+      "terms": [
+        "Fall",
+        "Winter"
+      ]
+    },
+    {
+      "name": "CMAF-2280",
+      "dropzoneid": "",
+      "mcindex": -1,
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ]
+    },
+    {
+      "name": "MATH-1020",
+      "dropzoneid": "",
+      "mcindex": -1,
+      "terms": [
+        "Fall",
+        "Winter",
+        "Summer"
+      ]
+    }
+    
+]
