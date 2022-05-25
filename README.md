@@ -1,5 +1,5 @@
 # Study Years Planner
-This intention of this web app is for university students to visualize the course they would like to take during their study at the university. This tool has the functionality to drap and drop the courses into the different terms in the different years. This way, the visualizatin helps clearly with the course scheduling term by term.
+The intention of this web app is for university students to visualize the course they would like to take during their study at the university. This tool has the functionality to drap and drop the courses into the different terms in the different years. This way, the visualizatin helps clearly with the course scheduling term by term.
 
 ## Live Link
 ### https://planner.kapthang.dev/
