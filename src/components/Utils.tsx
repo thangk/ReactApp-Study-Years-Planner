@@ -71,6 +71,25 @@ export const getCourseIndexInArray = (courseArray: Course2[], courseName: string
 
 export const kaplog = (logIdentifier: boolean, logMessage: string) => (logIdentifier) ? console.log(logMessage) : null;
 
+export const isDropzoneEmpty = (source: Year[], dropzone: string): boolean => {
+
+    const copySource: Year[] = [...source];
+
+    const [targetYear, targetTerm, targetIndex] = dropzone.split('-');
+
+    for (let i = 0; i < copySource.length; i++) {
+        if (copySource[i].year === Number(targetYear))
+        
+            for (let j = 0; j < copySource[i].terms.length; j++)
+                if (copySource[i].terms[j].termname === targetTerm) {
+
+                    return copySource[i].terms[j].courses[Number(targetIndex)] === null ? true : false;
+                }
+    }
+
+    return false;
+}
+
 
 //  returns a string from Constants.courseColours array in Constants module
 // export const get_CourseColour = (courseName: string): string => Constants.courseColours[courseName] ? Constants.courseColours[courseName] : Constants.courseColours['default'];

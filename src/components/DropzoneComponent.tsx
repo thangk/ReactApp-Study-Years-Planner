@@ -3,7 +3,7 @@ import { DragEvent, useContext } from 'react';
 import { AllContext } from '../App';
 import { COURSES_ACTION, MOVED_COURSES_ACTION, YEARS_ACTION, SETS_ACTION } from './Constants_ACTION';
 import { Course2 } from './Types';
-import { kaplog } from './Utils';
+import { isDropzoneEmpty, kaplog } from './Utils';
 import { ConsolelogToggle } from './ConsoleLogDebugToggles';
 
 // @ts-ignore
@@ -34,9 +34,13 @@ const DropzoneComponent = ({ children, id}) => {
         const copyMovedCourses_Array: Course2[] = [...state_DataArrays.movedCourses_Array];
 
         
+        // kaplog(true, 
+        //     `isDropzoneEmpty: ${isDropzoneEmpty(state_DataArrays.years_Array, state_Sets.dropzone)}`);
+
 
         //  if item is in Courses List
-        if (!state_Sets.inYearsList) {
+        if (!state_Sets.inYearsList && isDropzoneEmpty(state_DataArrays.years_Array, state_Sets.dropzone)) {
+        // if (!state_Sets.inYearsList) {
 
             //  add dropzoneid
             copyCourses_Array[state_Sets.draggedItemIndex].dropzoneid = state_Sets.dropzone;
@@ -64,15 +68,10 @@ const DropzoneComponent = ({ children, id}) => {
         
 
         //  if item is in the Moved Courses List
-        if (state_Sets.inYearsList) {
-
-            
+        if (state_Sets.inYearsList && isDropzoneEmpty(state_DataArrays.years_Array, state_Sets.dropzone)) {
+        // if (state_Sets.inYearsList ) {
 
             const oldDropzoneID: string = copyMovedCourses_Array[state_Sets.draggedItemIndex].dropzoneid;
-
-            kaplog(true,
-            `oldDropzoneID: ${oldDropzoneID}
-            newDropzoneID: ${state_Sets.dropzone}`)
 
             //  update the dropzoneid
             copyMovedCourses_Array[state_Sets.draggedItemIndex].dropzoneid = state_Sets.dropzone;
